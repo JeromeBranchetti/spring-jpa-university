@@ -1,0 +1,38 @@
+<!DOCTYPE  HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<div th:replace="resources :: head"></div> 
+ 		<title> Degree</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1 th:text="${departments.name}"></h1>
+		
+						
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Nome</th>
+						<th scope="col">Level</th>
+						<th scope="col">Address</th>
+						<th scope="col">Email</th>
+						<th scope="col">Website</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr th:each="degree : ${degrees}">
+					<td th:text="${degree.name}"></td>
+					<td th:text="${degree.level}"></td>
+					<td th:text="${degree.address}"></td>
+					<td th:text="${degree.email}"></td>
+					<td th:text="${degree.website}"></td>
+					
+				</tr>
+				</tbody>
+			</table>
+			<a th:href="@{/}">Home</a>
+		</div>
+		
+		<div th:replace="resources :: scripts"></div>
+	</body>
+	</html>
