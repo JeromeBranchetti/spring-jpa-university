@@ -6,12 +6,12 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1 th:text="${departments.name}"></h1>
+			<h1 class="mb-3" th:text="${departments.name}"></h1>
 		
 						
-			<table>
+			<table class="table">
 				<thead>
-					<tr>
+					<tr class="table-primary">
 						<th scope="col">Nome</th>
 						<th scope="col">Level</th>
 						<th scope="col">Address</th>
@@ -21,7 +21,7 @@
 				</thead>
 				<tbody>
 				<tr th:each="degree : ${degrees}">
-					<td th:text="${degree.name}"></td>
+					<td class="fw-bold" th:text="${degree.name}"></td>
 					<td th:text="${degree.level}"></td>
 					<td th:text="${degree.address}"></td>
 					<td th:text="${degree.email}"></td>
@@ -30,7 +30,7 @@
 				</tr>
 				</tbody>
 			</table>
-			<a th:href="@{/}">Home</a>
+			<a class="btn btn-secondary btn-lg mt-3" th:href="@{/}">Home</a>
 		</div>
 		
 		<div th:replace="resources :: scripts"></div>

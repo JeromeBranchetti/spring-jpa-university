@@ -6,12 +6,12 @@
 	</head>
 	<body>
 		<div class="container">
-		<h1>The departments</h1>
+		<h1 class="text-center">The Departments</h1>
 		<hr/>
 		
 		<table class="table">
 			<thead>
-				<tr>
+				<tr class="table-primary">
 					<th scope="col">Name</th>
 					<th scope="col">Address</th>
 					<th scope="col">Phone</th>
@@ -23,7 +23,7 @@
 			
 			<tbody>
 				<tr th:each="department : ${departments}">
-					<td th:text="${department.name}"></td>
+					<td class="fw-bold" th:text="${department.name}"></td>
 					<td th:text="${department.address}"></td>
 					<td th:text="${department.phone}"></td>
 					<td th:text="${department.email}"></td>
